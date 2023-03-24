@@ -5,7 +5,7 @@ const ageElems = document.querySelectorAll('.ageElem');
 btn.addEventListener('click', function() {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === 3 && xhr.status === 200) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
             const data = JSON.parse(xhr.responseText);
             for (let i = 0; i < data.length; i++) {
                 nameElems[i].textContent = data[i].name;
